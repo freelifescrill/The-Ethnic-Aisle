@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoriesViewController: UIViewController {
+class CategoriesViewController: UIViewController, UICollectionViewDelegate, UISearchBarDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,27 @@ class CategoriesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+/*
+ // MARK: - CollectionView Methods
+ 
+ */
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+    }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+
+    
     /*
     // MARK: - Navigation
 

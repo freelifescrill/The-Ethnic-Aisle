@@ -10,12 +10,15 @@
 import UIKit
 
 
-class HomeViewController: UICollectionViewController {
+class HomeViewController: UICollectionViewController{
 
     var names = ["Adult Daycare", "Attorneys and Consultants", ",Auto Detail", "Beauty and Cosmetology", "Child Care", "Church", "Counseling", "Creatives and Event Planning", "Dentistry", "Doctors", "Entertainment", "Fashion Models", "Finance", "Fitness", "Funeral Homes", "Graphic Design", "Health Clubs and Spas", "Laundry and Dry Cleaning", "Mass Media", "Mens Grooming", "Online Shopping", "Physical Therapy", "Property Maintenance", "Real Estate", "Restaurants", "Security", "Staffing Agency", "Storage", "Tattoos and Piercings", "Travel Services", "Visual Art", "Writing and Publishing"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView?.dataSource = self
+        self.collectionView?.delegate = self
+        
             // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,7 +32,7 @@ class HomeViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let businessCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+       let businessCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BusinessCell", for: indexPath)
         businessCell.backgroundColor = UIColor(red: 229/255, green: 213/255, blue: 157/255, alpha: 1.0)
 
         

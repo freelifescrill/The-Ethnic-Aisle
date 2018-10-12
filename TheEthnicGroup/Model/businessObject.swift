@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+
+//business model object 
+struct Business {
+    //For use in Home Tab
+    var businessName = ""
+    var bkgrdImageName = ""
+    let image : UIImage
+    
+    //For Use in Map View
+    var latLocation = ""
+    var lonLocation = ""
+    
+}

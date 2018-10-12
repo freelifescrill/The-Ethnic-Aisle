@@ -15,7 +15,23 @@ class TabBarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //Do any design customization
+        customizeAppearance()
+    }
 
+/*
+ // MARK: - Tab Bar Design
+ 
+ */
+    
+    func customizeAppearance(){
+        self.tabBar.barTintColor = UIColor(red: 96/255, green: 79/255, blue: 23/255, alpha: 1.0)
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

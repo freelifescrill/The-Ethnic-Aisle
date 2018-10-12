@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let navigationController = application.windows[0].rootViewController as! UINavigationController
+        
+        //set the navi
+        navigationController.navigationBar.barTintColor = UIColor(red: 246/255, green: 187/255, blue: 71/255, alpha: 1.0)
+        
+        
+        //navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 96/255, green: 79/255, blue: 23/255, alpha: 1.0)]
         // Override point for customization after application launch.
         return true
     }

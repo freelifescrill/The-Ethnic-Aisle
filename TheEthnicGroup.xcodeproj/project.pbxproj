@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7FF6202103D7D70010715B /* businessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF61F2103D7D70010715B /* businessObject.swift */; };
+		1A7FF6222103DABA0010715B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF6212103DABA0010715B /* MapViewController.swift */; };
+		1A7FF6242103E6FE0010715B /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF6232103E6FE0010715B /* CategoriesViewController.swift */; };
+		1A7FF6262103FE560010715B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF6252103FE560010715B /* TabBarViewController.swift */; };
 		1AFB7B33209D3B1400FB16D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB7B32209D3B1400FB16D2 /* AppDelegate.swift */; };
-		1AFB7B35209D3B1400FB16D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB7B34209D3B1400FB16D2 /* ViewController.swift */; };
+		1AFB7B35209D3B1400FB16D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB7B34209D3B1400FB16D2 /* HomeViewController.swift */; };
 		1AFB7B38209D3B1400FB16D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFB7B36209D3B1400FB16D2 /* Main.storyboard */; };
 		1AFB7B3B209D3B1400FB16D2 /* TheEthnicGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB7B39209D3B1400FB16D2 /* TheEthnicGroup.xcdatamodeld */; };
 		1AFB7B3D209D3B1600FB16D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AFB7B3C209D3B1600FB16D2 /* Assets.xcassets */; };
@@ -35,9 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A7FF61F2103D7D70010715B /* businessObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = businessObject.swift; sourceTree = "<group>"; };
+		1A7FF6212103DABA0010715B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1A7FF6232103E6FE0010715B /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		1A7FF6252103FE560010715B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1AFB7B2F209D3B1400FB16D2 /* TheEthnicGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheEthnicGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AFB7B32209D3B1400FB16D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1AFB7B34209D3B1400FB16D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1AFB7B34209D3B1400FB16D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1AFB7B37209D3B1400FB16D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AFB7B3A209D3B1400FB16D2 /* TheEthnicGroup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheEthnicGroup.xcdatamodel; sourceTree = "<group>"; };
 		1AFB7B3C209D3B1600FB16D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +84,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A7FF6172103CC3A0010715B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A7FF61F2103D7D70010715B /* businessObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A7FF6192103CC730010715B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A7FF61A2103CC7B0010715B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A7FF6212103DABA0010715B /* MapViewController.swift */,
+				1AFB7B34209D3B1400FB16D2 /* HomeViewController.swift */,
+				1A7FF6252103FE560010715B /* TabBarViewController.swift */,
+				1A7FF6232103E6FE0010715B /* CategoriesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1AFB7B26209D3B1400FB16D2 = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				1AFB7B32209D3B1400FB16D2 /* AppDelegate.swift */,
-				1AFB7B34209D3B1400FB16D2 /* ViewController.swift */,
+				1A7FF6192103CC730010715B /* View */,
+				1A7FF6172103CC3A0010715B /* Model */,
+				1A7FF61A2103CC7B0010715B /* Controller */,
 				1AFB7B36209D3B1400FB16D2 /* Main.storyboard */,
 				1AFB7B3C209D3B1600FB16D2 /* Assets.xcassets */,
 				1AFB7B3E209D3B1600FB16D2 /* LaunchScreen.storyboard */,
@@ -259,8 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AFB7B35209D3B1400FB16D2 /* ViewController.swift in Sources */,
+				1AFB7B35209D3B1400FB16D2 /* HomeViewController.swift in Sources */,
 				1AFB7B3B209D3B1400FB16D2 /* TheEthnicGroup.xcdatamodeld in Sources */,
+				1A7FF6242103E6FE0010715B /* CategoriesViewController.swift in Sources */,
+				1A7FF6202103D7D70010715B /* businessObject.swift in Sources */,
+				1A7FF6262103FE560010715B /* TabBarViewController.swift in Sources */,
+				1A7FF6222103DABA0010715B /* MapViewController.swift in Sources */,
 				1AFB7B33209D3B1400FB16D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +475,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H49Y5ZSG6;
 				INFOPLIST_FILE = TheEthnicGroup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +494,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H49Y5ZSG6;
 				INFOPLIST_FILE = TheEthnicGroup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
