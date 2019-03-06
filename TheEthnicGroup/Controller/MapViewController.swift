@@ -8,11 +8,14 @@
 
 import UIKit
 import MapKit
+import Hero
+//Import CityMapSDK
 
 //Use the map pins to display information about the business. Ethnicty, Owners Name, Hours Operation
+//See if its possible adjust map colors
 
 
-class MapViewController: UIViewController, UISearchBarDelegate {
+class MapViewController: UIViewController, UISearchBarDelegate, MKMapViewDelegate {
     
     //*****GET USERS CURRENT LOCATION FOR INITIAL LOCATION
     let regionRadius: CLLocationDistance = 1000
@@ -45,6 +48,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     }
     
     @objc func OpenMenu(){
+        //will display a menu upon clicking map pins
         
         
     }
@@ -56,10 +60,25 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     
     //call this function to center the Users Location.
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius, regionRadius)
+        let coordinateRegion = MKCoordinateRegion.init(center: location.coordinate,
+                                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        self.searchBar.alpha = 0.2
+
+    }
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        self.searchBar.alpha = 0.2
+        
+    }
+    func mapView(_ mapView: MKMapView,
+                 regionDidChangeAnimated animated: Bool){
+       
+    }
+    
     
     /*
      // MARK: - Search Bar
@@ -69,25 +88,48 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
     }
+    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
     }
+    
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         
         return true
     }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
+    
     func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
         
     }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
     }
+    
+    
+    /*
+     // MARK: - Map Delegate Methods
+     
+     */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     /*

@@ -1,0 +1,6 @@
+framework module Pods_TheEthnicGroupTests {
+  umbrella header "Pods-TheEthnicGroupTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

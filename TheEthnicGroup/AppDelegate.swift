@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Foundation
+import TwitterKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,18 +18,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let navigationController = application.windows[0].rootViewController as! UINavigationController
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        let navigationController = application.windows[0].rootViewController as! UINavigationController
+//        
+//        //set the navi
+//        navigationController.navigationBar.barTintColor = UIColor(red: 246/255, green: 187/255, blue: 71/255, alpha: 1.0)
         
-        //set the navi
-        navigationController.navigationBar.barTintColor = UIColor(red: 246/255, green: 187/255, blue: 71/255, alpha: 1.0)
+        let navigationBarAppearace = UINavigationBar.appearance()
         
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+
+        navigationBarAppearace.tintColor = UIColor(red: 96.0/255.0, green: 79.0/255.0, blue: 23.0/255.0, alpha: 1.0)
+        navigationBarAppearace.barTintColor = UIColor(red: 96.0/255.0, green: 79.0/255.0, blue: 23.0/255.0, alpha: 1.0)
+        
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"hTpkPVU4pThkM0", consumerSecret:"ovEqziMzLpUOF163Qg2mj")
+
         
         //navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 96/255, green: 79/255, blue: 23/255, alpha: 1.0)]
         // Override point for customization after application launch.
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
