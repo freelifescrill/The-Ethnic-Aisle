@@ -7,8 +7,11 @@
 //
 
 import UIKit
-import Hero
 import TwitterKit
+import CoreData
+
+
+
 
 
 // twitter extension
@@ -17,7 +20,7 @@ import TwitterKit
 //    static let deviceOrientationDidChange = #selector(UIViewController.deviceOrientationDidChange)
 //}
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
 
     /*
      // MARK: - OUTLETS
@@ -35,7 +38,7 @@ class LogInViewController: UIViewController {
     
     // TextField Support
     var BLANK = " "
-    var invalCHAR = "@,#,$,%,^,&,*,(,),_,+,{,},|,:,?,>,<,~"
+    var invalCHAR: [String] = ["@","#","$","%","^","&","*",",","_","+","{","}","|",":","?",">","<","~"]
     var minChar = 6
     var maxChar = 15
     
@@ -43,7 +46,8 @@ class LogInViewController: UIViewController {
     let usrname : String? = "YoungScrill"
     let password : String? = "EastAtlanta21"
 
-    
+//    @objc func keyboardWillShow(notification: NSNotification) {}
+  //  @objc func keyboardWillHide(notification: NSNotification) {}
     
     /*
      // MARK: - ViewDidLoad/WillAppear
@@ -55,6 +59,9 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         loginWIthTwitter()
         
+        //notification observers to hide
+      NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+      NotificationCenter.default.addObserver(self, selector: #selector(LogInViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         //rounded edges..
         self.logoLabel.layer.cornerRadius = 30
@@ -64,10 +71,30 @@ class LogInViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
+       // guard let userInfo = Notification.userInfo else {return}
+
+        //guard let keyboardSize = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {return}
+        
+        
+        
         if (validateEntries()){
             
             
         }
+    }
+    
+    @objc private func keyboardWillShow(){
+        
+        
+        
+    }
+    @objc private func keyboardWillHide(){
+        //use core animation.. 
+        
+        
     }
     
     
@@ -82,7 +109,7 @@ class LogInViewController: UIViewController {
         logInButton.center.x = self.view.center.x
         logInButton.center.y = self.view.center.y 
        // logInButton.perform(#selector(performTransition))
-        self.view.addSubview(logInButton)
+        //self.view.addSubview(logInButton)
         
     }
     

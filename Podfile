@@ -8,9 +8,12 @@ target 'TheEthnicGroup' do
   # Pods for TheEthnicGroup
   pod 'SVProgressHUD'
   pod 'DataSources'
-  pod 'Hero'
   pod 'TwitterKit'
-  pod 'Swifty'
+  pod 'GoogleMaps'
+  pod 'Hero'
+
+  
+  
   
   
   target 'TheEthnicGroupTests' do

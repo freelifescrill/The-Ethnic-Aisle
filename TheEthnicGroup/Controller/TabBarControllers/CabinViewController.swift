@@ -8,11 +8,43 @@
 
 import UIKit
 
-class CabinViewController: UIViewController, UITableViewDelegate {
+class CabinViewController: UIViewController, UITableViewDelegate  {
     var arrayOfTweets = ["1","2","3","4","5","6","7","8","9","10","11","12","13"]
     var adBanner = UIView(frame: CGRect(x: 60, y: 60, width: 60, height: 60))
     var bannerHeight = 50.00
+   
     
+    var greatNewsString = "GREAT NEWS!"
+    var goodNewsString = "GOOD NEWS!"
+    var nothinFancySTring = "NOTHING FANCY"
+    
+     var ActionTitles : [String] = ["GREAT NEWS!", "GOOD NEWS!","NOTHING FANCY"]
+    
+    
+    
+    
+    @IBAction func owlInsight(_ sender: Any) {
+        let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: ActionTitles[0], message: "Check out the New stores we've partnered with!", preferredStyle: .actionSheet)
+        
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel")
+        }
+        actionSheetControllerIOS8.addAction(cancelActionButton)
+        
+        let saveActionButton = UIAlertAction(title: "Sure", style: .default)
+        { _ in
+            print("clicked sure to check them out!")
+        }
+        actionSheetControllerIOS8.addAction(saveActionButton)
+        
+        let deleteActionButton = UIAlertAction(title: "Remind me", style: .default)
+        { _ in
+            print("tapped remind.")
+        }
+        actionSheetControllerIOS8.addAction(deleteActionButton)
+        self.present(actionSheetControllerIOS8, animated: true, completion: nil)
+        
+    }
     
     @IBOutlet weak var cabinTableView: UITableView!
     

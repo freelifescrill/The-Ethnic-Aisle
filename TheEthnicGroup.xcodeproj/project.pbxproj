@@ -17,6 +17,7 @@
 		1A7FF6222103DABA0010715B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF6212103DABA0010715B /* MapViewController.swift */; };
 		1A7FF6242103E6FE0010715B /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF6232103E6FE0010715B /* CategoriesViewController.swift */; };
 		1A7FF6262103FE560010715B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7FF6252103FE560010715B /* TabBarViewController.swift */; };
+		1A9E1608222F693C00ADC963 /* Swifter-master in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E1607222F693C00ADC963 /* Swifter-master */; };
 		1AC10DF922028D170078FF2F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC10DF822028D170078FF2F /* DetailViewController.swift */; };
 		1AC10DFB22029D1C0078FF2F /* EthnicGroupIcons in Resources */ = {isa = PBXBuildFile; fileRef = 1AC10DFA22029D1C0078FF2F /* EthnicGroupIcons */; };
 		1AFB7B33209D3B1400FB16D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB7B32209D3B1400FB16D2 /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		1A7FF6212103DABA0010715B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1A7FF6232103E6FE0010715B /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		1A7FF6252103FE560010715B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1A9E1607222F693C00ADC963 /* Swifter-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Swifter-master"; sourceTree = "<group>"; };
 		1AC10DF822028D170078FF2F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1AC10DFA22029D1C0078FF2F /* EthnicGroupIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EthnicGroupIcons; sourceTree = "<group>"; };
 		1AFB7B2F209D3B1400FB16D2 /* TheEthnicGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheEthnicGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 		1A37085621FF572600E37B3F /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				1A9E1607222F693C00ADC963 /* Swifter-master */,
 				1AC10DFA22029D1C0078FF2F /* EthnicGroupIcons */,
 				1A37085721FF577B00E37B3F /* DataSources */,
 			);
@@ -401,6 +404,7 @@
 				1AC10DFB22029D1C0078FF2F /* EthnicGroupIcons in Resources */,
 				1AFB7B40209D3B1600FB16D2 /* LaunchScreen.storyboard in Resources */,
 				1AFB7B3D209D3B1600FB16D2 /* IconAssets.xcassets in Resources */,
+				1A9E1608222F693C00ADC963 /* Swifter-master in Resources */,
 				1AFB7B38209D3B1400FB16D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,10 +451,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheEthnicGroup/Pods-TheEthnicGroup-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

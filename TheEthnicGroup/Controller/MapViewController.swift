@@ -8,8 +8,7 @@
 
 import UIKit
 import MapKit
-import Hero
-//Import CityMapSDK
+import GoogleMaps
 
 //Use the map pins to display information about the business. Ethnicty, Owners Name, Hours Operation
 //See if its possible adjust map colors

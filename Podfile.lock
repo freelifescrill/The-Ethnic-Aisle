@@ -2,6 +2,11 @@ PODS:
   - DataSources (0.7.0):
     - DataSources/Default (= 0.7.0)
   - DataSources/Default (0.7.0)
+  - GoogleMaps (3.0.2):
+    - GoogleMaps/Maps (= 3.0.2)
+  - GoogleMaps/Base (3.0.2)
+  - GoogleMaps/Maps (3.0.2):
+    - GoogleMaps/Base
   - Hero (1.4.0)
   - SVProgressHUD (2.2.5)
   - TwitterCore (3.2.0)
@@ -10,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - DataSources
+  - GoogleMaps
   - Hero
   - SVProgressHUD
   - TwitterKit
@@ -17,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DataSources
+    - GoogleMaps
     - Hero
     - SVProgressHUD
     - TwitterCore
@@ -24,11 +31,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   DataSources: 1cc9d95cea1e39a17b490908add2bd341d5bc569
+  GoogleMaps: 941cd655e009b4d8e42df19a3d749bc3fccec973
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 167750b357e1a76b0e35d3ac9f3ae06bb8cd3e2a
+PODFILE CHECKSUM: 800f520b09698cbff46bf8b4742bb076960075e3
 
 COCOAPODS: 1.5.3

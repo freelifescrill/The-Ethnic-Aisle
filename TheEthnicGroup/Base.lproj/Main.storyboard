@@ -670,6 +670,9 @@
                                                     <color key="titleColor" red="1" green="0.41703017450000002" blue="0.38931622989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="titleShadowColor" red="0.37647058820000001" green="0.30980392159999998" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="owlInsight:" destination="9x7-Sf-aah" eventType="touchUpInside" id="qez-JP-MTU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtE-xK-W9i">
                                                 <rect key="frame" x="0.0" y="50" width="50" height="50"/>
@@ -758,6 +761,11 @@
                                                 <constraint firstItem="md5-1x-9sD" firstAttribute="baseline" secondItem="qgt-pe-NDx" secondAttribute="baseline" id="vpW-lc-E7Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="notifyHeroModifier"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dateStampLabel" destination="TdA-Gd-c51" id="zLM-cU-SeC"/>
                                             <outlet property="stampImageView" destination="yVB-Nc-KzI" id="cnn-sq-Rgl"/>

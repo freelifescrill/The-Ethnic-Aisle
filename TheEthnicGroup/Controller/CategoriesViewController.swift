@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hero
 
 class CategoriesViewController: UIViewController, UICollectionViewDelegate, UISearchBarDelegate  {
     var minHeight = 50.00
